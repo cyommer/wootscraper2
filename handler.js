@@ -33,14 +33,14 @@ module.exports.wootscrape = async (event, context) => {
     // console.log(res);
     const response = res['data'];
 
-    if (JSON.stringify(response).includes("Crap")) {
+    if (JSON.stringify(response).includes(process.env.SEARCH_TERM)) {
       // console.log(`Scraper Response is: ${JSON.stringify(response)}`);
       console.log('Yep!');
       var sns = new AWS.SNS();
       var params = {
         Message: "Go get that BoC!", 
         Subject: "BoC Exists!",
-        TopicArn: "***REMOVED***"
+        TopicArn: process.env.SNS_ARN
       };
       sns.publish(params, context.done);
     } else {
