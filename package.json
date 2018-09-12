@@ -1,0 +1,16 @@
+{
+  "name": "wootscraper2",
+  "version": "1.0.0",
+  "description": "wootscraper2",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-runtime": "^6.11.6",
+    "moment": "^2.18.1",
+    "scrape-it": "^3.3.2"
+  }
+}
